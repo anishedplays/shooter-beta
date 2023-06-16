@@ -4,6 +4,12 @@ import os
 import random
 import csv
 import button
+from kivymd.app import MDApp
+
+class main(MDApp):
+	def build(self):
+		return
+
 
 mixer.init()
 pygame.init()
@@ -17,7 +23,9 @@ SCREEN_WIDTH = window_width
 SCREEN_HEIGHT = window_height
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
 pygame.display.set_caption('Shooter')
+
 
 #set framerate
 clock = pygame.time.Clock()
