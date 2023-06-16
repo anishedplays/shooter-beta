@@ -8,9 +8,13 @@ import button
 mixer.init()
 pygame.init()
 
+pygame.display.set_mode()
 
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = int(SCREEN_WIDTH * 0.8)
+window_width = pygame.display.get_surface().get_width()
+window_height = pygame.display.get_surface().get_height()
+
+SCREEN_WIDTH = window_width
+SCREEN_HEIGHT = window_height
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Shooter')
@@ -43,9 +47,9 @@ grenade_thrown = False
 
 
 #load music and sounds
-#pygame.mixer.music.load('audio/music2.mp3')
-#pygame.mixer.music.set_volume(0.3)
-#pygame.mixer.music.play(-1, 0.0, 5000)
+pygame.mixer.music.load('audio/music2.mp3')
+pygame.mixer.music.set_volume(0.3)
+pygame.mixer.music.play(-1, 0.0, 5000)
 jump_fx = pygame.mixer.Sound('audio/jump.wav')
 jump_fx.set_volume(0.05)
 shot_fx = pygame.mixer.Sound('audio/shot.wav')
